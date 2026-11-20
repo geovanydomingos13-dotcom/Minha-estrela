@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Para a Minha Estrela ✨</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--g:#f3d28b;--p:#f4a6c8}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+body{min-height:100vh;font:16px/1.6 Inter,system-ui,sans-serif;color:#fff;background:radial-gradient(ellipse at 50% 0,#3b1d6e,#141a45 55%,#080b24) fixed;overflow-x:hidden}
+h1,h2,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500}
+h1{font-size:2.3rem;line-height:1.15}h2{font-size:1.7rem;color:var(--g);margin-bottom:6px}
+.s{position:fixed;width:2px;height:2px;background:#fff;border-radius:50%;animation:tw 4s infinite;z-index:0}
+@keyframes tw{50%{opacity:.15}}
+.moon{position:fixed;top:60px;right:22px;width:46px;height:46px;border-radius:50%;box-shadow:inset -14px 0 0 0 #f6efe0;opacity:.8;z-index:0}
+.scr{display:none;position:relative;z-index:1;min-height:100vh;padding:72px 20px 40px;flex-direction:column;align-items:center;text-align:center;max-width:560px;margin:auto}
+.scr.on{display:flex;animation:fi .8s}@keyframes fi{from{opacity:0;transform:translateY(10px)}}
+#bar{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:max(10px,env(safe-area-inset-top)) 14px 10px;background:linear-gradient(#080b24cc,transparent)}
+#bar button{background:none;border:0;color:#fff;font-size:1.2rem;opacity:.8}
+#pr span{opacity:.25;font-size:1.2rem;transition:.6s}#pr span.on{opacity:1;filter:drop-shadow(0 0 6px var(--g))}
+.btn{background:linear-gradient(135deg,#f4a6c8,#9b6bd6);color:#fff;border:0;border-radius:30px;padding:13px 26px;font:500 1rem Inter,sans-serif;margin:10px 5px;box-shadow:0 6px 22px #9b6bd655}
+.btn.alt{background:#ffffff1a;box-shadow:none;border:1px solid #fff4}
+.card{background:#ffffff12;border:1px solid #ffffff26;border-radius:18px;padding:22px;backdrop-filter:blur(6px);margin:14px 0;text-align:left;width:100%}
+p{margin:.6em 0}
+#bigstar{font-size:6rem;background:none;border:0;animation:pu 2.5s infinite;filter:drop-shadow(0 0 22px var(--g));margin:30px 0}
+@keyframes pu{50%{transform:scale(1.12) rotate(6deg)}}
+#map{width:100%;max-width:340px}
+.stn{cursor:pointer}.stn text{font-size:26px}.lock{opacity:.3;cursor:default}
+.next circle{animation:pu 1.8s infinite;transform-origin:center;transform-box:fill-box}
+.arena{position:relative;width:100%;height:340px;border:1px dashed #fff4;border-radius:18px;overflow:hidden;touch-action:manipulation}
+.f{position:absolute;font-size:2.4rem;animation:fl 2.8s ease-in-out;padding:8px}@keyframes fl{0%{transform:scale(0)}15%{transform:scale(1)}50%{transform:translateY(-14px)}}
+#stage{position:relative;width:300px;height:400px;touch-action:none;margin:10px auto}
+.slot{position:absolute;width:90px;height:90px;border:1px dashed #fff5;border-radius:8px}
+.pc{position:absolute;width:90px;height:90px;cursor:grab;touch-action:none;filter:drop-shadow(0 0 6px #f4a6c8)}.pc path{fill:#f4a6c8}
+.pc.ok{filter:none;pointer-events:none}
+select{background:#ffffff1a;color:#fff;border:1px solid #fff4;border-radius:12px;padding:10px;font-size:1rem;margin:4px}option{color:#000}
+#box{font-size:5rem;transition:.8s}#box.open{transform:scale(1.3) rotate(-8deg)}
+#sky{font:500 2.4rem 'Cormorant Garamond',serif;color:var(--g);text-shadow:0 0 18px var(--g);letter-spacing:.08em;animation:fi 2s}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%}
+.cd{background:#ffffff14;border:1px solid #fff3;border-radius:14px;padding:18px 10px;color:#fff;font:inherit;min-height:84px}.cd.pk{background:#f4a6c844;border-color:var(--p)}
+#md{position:fixed;inset:0;z-index:9;background:#080b24ee;display:none;align-items:center;justify-content:center;padding:20px}#md.on{display:flex}
+.fx{position:fixed;bottom:-30px;z-index:10;pointer-events:none;animation:up 3s forwards}@keyframes up{to{transform:translateY(-110vh) rotate(40deg);opacity:0}}
+.sign{font:500 1.9rem 'Cormorant Garamond',serif;color:var(--g);margin:24px 0 8px;text-align:center}
+.shake{animation:sh .4s}@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+</style></head><body>
+<div class="moon"></div>
+<div id="bar"><button id="rs" title="Reiniciar">↺</button><div id="pr"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div><button id="mu" title="Música">🔇</button></div>
+
+<section class="scr" id="intro"><h1>Uma viagem até à minha estrela ✨</h1><p style="opacity:.8;font-style:italic">Há coisas que não se explicam facilmente, mas talvez se descubram ao longo do caminho. Esta pequena aventura é uma delas.</p>
+<button id="bigstar" aria-label="Tocar na estrela">🌟</button><p id="hint" style="opacity:.6">Toca na estrela</p>
+<div id="it" hidden class="card"><p><b>Olá, minha estrela.</b></p><p>Preparei uma pequena aventura para ti. Não precisas de ser especialista em jogos, nem de acertar em tudo. Só precisas de explorar, sorrir e descobrir aquilo que escondi ao longo deste caminho.</p><p>Cada desafio tem uma pequena recompensa. E prometo que algumas delas são especialmente dedicadas a ti.</p><p>Estás pronta?</p><div style="text-align:center"><button class="btn" onclick="go('map')">Começar a aventura ✨</button></div></div></section>
+
+<section class="scr" id="map"><h2>O mapa da constelação</h2><p style="opacity:.75">Cada estrela é um desafio. Quando completares um, o próximo caminho ilumina-se.</p><svg id="mp" viewBox="0 0 300 420"></svg><div id="fin" hidden><button class="btn" onclick="letter()">Descobrir a última surpresa 💌</button></div></section>
+
+<section class="scr" id="g0"><h2>Um universo cheio de motivos</h2><p>Captura 7 estrelas ou corações em 30 segundos.</p><p>⏱ <b id="t1">30</b>s &nbsp; ✨ <b id="c1">0/7</b></p><div class="arena" id="a1"></div><div id="r1" hidden><p>Quase! Tenta outra vez, sem pressa.</p><button class="btn" onclick="g1()">Tentar de novo</button></div></section>
+
+<section class="scr" id="g1"><h2>Há coisas que encaixam</h2><p>Arrasta as quatro peças para formar o coração.</p><div id="stage"></div></section>
+
+<section class="scr" id="g2"><h2>Uma data, um pequeno segredo</h2><div id="box">🎁</div><div class="card" id="cl"></div><div id="sel"><select id="mo"><option value="">Mês</option><option>Maio</option><option>Junho</option><option>Julho</option><option>Agosto</option></select><select id="yr"><option value="">Ano</option><option>2023</option><option>2024</option><option>2025</option></select><br><button class="btn" id="bn">Próxima pista</button><button class="btn alt" id="ok">Abrir a caixa</button></div><p id="er" style="color:var(--p)"></p><div id="sky"></div></section>
+
+<section class="scr" id="g3"><h2>Se pudesses escolher…</h2><p>Escolhe três cartões. Não existem respostas erradas.</p><div id="a4" class="cg"></div><p id="m4" class="serif" style="font-size:1.3rem;color:var(--p);min-height:60px"></p></section>
+
+<section class="scr" id="lt"><div class="card serif" style="font-size:1.25rem;line-height:1.65">
+<p>Minha Estrela,</p>
+<p>Podia ter-te enviado uma mensagem simples, mas contigo apetece-me fazer as coisas com cuidado.</p>
+<p>Começo pelo mais directo: és linda. E não falo só do teu sorriso, mas da forma como tudo em ti parece natural. O jeito de estar, de falar, de seres especial sem fazeres esforço para isso.</p>
+<p>Gosto do teu jeito. Da maneira como falas, como te comportas, daquelas pequenas coisas que só tu tens. Não precisas de mudar nada para seres admirada. É por seres como és que dá vontade de te conhecer ainda melhor.</p>
+<p>Penso em ti mais vezes do que admito. Mesmo nos dias cheios, surge-me a vontade de saber como estás, como correu o teu dia, se estás feliz ou se algo te preocupa.</p>
+<p>Gostava de te ter ao meu lado. De partilhar momentos, apoiar os teus sonhos, crescer contigo e criar memórias que valham a pena. Não te prometo perfeição, mas prometo maturidade, respeito, carinho e vontade de fazer as coisas a dois.</p>
+<p>Desde julho de 2024 que esta história existe, e acho que merece ser tratada com carinho. Não é uma data para te cobrar nada, é só uma referência bonita.</p>
+<p>Se tivesse de resumir o carinho, a admiração e a vontade de continuar a escrever esta história, escolheria simplesmente duas pessoas e um coração.</p></div>
+<div class="sign">GEOVANY ❤️ A MINHA ESTRELA</div><p class="serif" style="font-size:1.2rem;opacity:.85">Não sei quantas páginas ainda nos esperam, mas sei que gostaria de continuar a escrever algumas delas contigo.</p><button class="btn" onclick="go('q')">Continuar ✨</button></section>
+
+<section class="scr" id="q"><h2>Depois de tudo isto, posso fazer-te uma última pergunta?</h2><div id="qa"><button class="btn" onclick="q1()">Claro que sim ❤️</button></div></section>
+
+<div id="md"><div class="card" style="max-width:440px;text-align:center"><div id="mt" class="serif" style="font-size:1.25rem"></div><button class="btn" id="mb">Guardar este elogio ❤️</button></div></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const R=[`Sabes uma coisa?\n\nA tua beleza não está apenas naquilo que os olhos conseguem ver. Está também na maneira como és, na forma como te expressas e nos pequenos detalhes que talvez nem percebas, mas que tornam a tua presença tão especial.\n\nE sim, és linda. Muito linda.`,
+`Talvez não exista uma forma perfeita de descrever aquilo que gosto em ti.\n\nMas se tivesse de começar, diria que gosto do teu jeito.\n\nGosto da maneira como és, da forma como falas, da tua espontaneidade e daqueles pequenos detalhes que fazem com que sejas simplesmente tu.\n\nNão precisas de tentar ser outra pessoa. O teu jeito já tem algo de muito bonito.`,
+`Julho de 2024.\n\nNão quero transformar uma data numa obrigação de recordar, mas há momentos que merecem um lugar especial na nossa memória.\n\nE, se hoje te dedico esta pequena aventura, é porque acredito que algumas pessoas merecem muito mais do que uma mensagem enviada num dia qualquer.\n\nTu és uma dessas pessoas.`,
+`Se me perguntassem o que gostaria de viver contigo, talvez não escolhesse algo extraordinário.\n\nTalvez escolhesse coisas simples. Estar contigo sem pressa, ouvir-te falar, rir das nossas próprias brincadeiras, acompanhar os teus sonhos, abraçar-te quando precisasses e criar memórias que não precisassem de fotografias para serem importantes.\n\nPorque, muitas vezes, são as coisas simples que mais ficam.`];
+let S;try{S=JSON.parse(localStorage.estrela)}catch(e){}S=S||{d:[0,0,0,0]};
+const save=()=>{try{localStorage.estrela=JSON.stringify(S)}catch(e){}};
+for(let i=0;i<70;i++){const e=document.createElement('i');e.className='s';e.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${Math.random()*4}s;opacity:${.4+Math.random()*.6}`;document.body.append(e)}
+function go(id){$$('.scr').forEach(e=>e.classList.toggle('on',e.id==id));scrollTo(0,0);if(id=='map')drawMap();$$('#pr span').forEach((e,i)=>e.classList.toggle('on',S.d[i]))}
+function burst(){for(let i=0;i<26;i++){const e=document.createElement('span');e.className='fx';e.textContent=['💖','✨','⭐','💗'][i%4];e.style.left=Math.random()*95+'%';e.style.fontSize=14+Math.random()*20+'px';e.style.animationDelay=Math.random()*.8+'s';document.body.append(e);setTimeout(()=>e.remove(),4000)}}
+function reward(i){$('#mt').innerHTML=R[i].split('\n\n').map(t=>`<p>${t}</p>`).join('');$('#mb').textContent=i==3?'Guardar esta memória ❤️':'Guardar este elogio ❤️';$('#md').classList.add('on');$('#mb').onclick=()=>{$('#md').classList.remove('on');S.d[i]=1;save();go('map')}}
+const P=[[70,340],[225,270],[85,165],[215,70]];
+function drawMap(){const nx=S.d.indexOf(0),all=nx<0;let h='';
+if(all)h+=`<path d="M150 360C40 280 20 170 80 110C115 75 145 95 150 125C155 95 185 75 220 110C280 170 260 280 150 360Z" fill="none" stroke="#f4a6c8" stroke-width="2" stroke-dasharray="900" stroke-dashoffset="900"><animate attributeName="stroke-dashoffset" to="0" dur="4s" fill="freeze"/></path>`;
+for(let i=0;i<3;i++)h+=`<line x1="${P[i][0]}" y1="${P[i][1]}" x2="${P[i+1][0]}" y2="${P[i+1][1]}" stroke="#f3d28b" stroke-width="1.5" stroke-dasharray="${S.d[i]?0:5}" opacity="${S.d[i]?.9:.3}"/>`;
+P.forEach((p,i)=>{const on=S.d[i]||i==nx;h+=`<g class="stn ${on?'':'lock'} ${i==nx?'next':''}" ${on&&!S.d[i]?`onclick="play(${i})"`:''}><circle cx="${p[0]}" cy="${p[1]}" r="26" fill="${S.d[i]?'#f3d28b33':'#ffffff11'}"/><text x="${p[0]}" y="${p[1]+9}" text-anchor="middle">${S.d[i]?'⭐':on?'🌟':'✦'}</text></g>`});
+$('#mp').innerHTML=h;$('#fin').hidden=!all}
+function play(i){go('g'+i);[g1,g2,g3,g4][i]()}
+let w,w2;
+function g1(){let n=0,t=30;const b=$('#a1');b.innerHTML='';$('#c1').textContent='0/7';$('#t1').textContent=t;$('#r1').hidden=1;clearInterval(w);clearInterval(w2);
+function end(ok){clearInterval(w);clearInterval(w2);b.innerHTML='';if(ok){burst();reward(0)}else $('#r1').hidden=0}
+function sp(){const e=document.createElement('span');e.className='f';e.textContent=['⭐','💖','✨','🌟'][Math.random()*4|0];e.style.left=Math.random()*78+4+'%';e.style.top=Math.random()*78+4+'%';e.onpointerdown=()=>{e.remove();$('#c1').textContent=++n+'/7';if(n>=7)end(1)};b.append(e);setTimeout(()=>e.remove(),2800)}
+w=setInterval(()=>{if(--t<0)return end(0);$('#t1').textContent=t},1000);w2=setInterval(sp,800);sp()}
+function g2(){const st=$('#stage');st.innerHTML='';let done=0;const H='M100 180C20 120 10 70 45 40C70 20 95 35 100 55C105 35 130 20 155 40C190 70 180 120 100 180Z',Q=[[0,0],[100,0],[0,100],[100,100]],SL=i=>[105+(i%2)*90-15,(i/2|0)*90+5];
+Q.forEach((q,i)=>{const s=document.createElement('div');s.className='slot';[s.style.left,s.style.top]=SL(i).map(v=>v+'px');st.append(s)});
+const pos=[[20,210],[190,210],[20,305],[190,305]].sort(()=>Math.random()-.5);
+Q.forEach((q,i)=>{const p=document.createElement('div');p.className='pc';p.innerHTML=`<svg viewBox="${q[0]} ${q[1]} 100 100" width="90" height="90"><path d="${H}"/></svg>`;p.style.left=pos[i][0]+'px';p.style.top=pos[i][1]+'px';let dx,dy,dr=0;
+p.onpointerdown=e=>{dr=1;p.setPointerCapture(e.pointerId);dx=e.clientX-p.offsetLeft;dy=e.clientY-p.offsetTop;p.style.zIndex=5};
+p.onpointermove=e=>{if(dr){p.style.left=e.clientX-dx+'px';p.style.top=e.clientY-dy+'px'}};
+p.onpointerup=()=>{dr=0;const s=SL(i);if(Math.hypot(p.offsetLeft-s[0],p.offsetTop-s[1])<40){p.style.left=s[0]+'px';p.style.top=s[1]+'px';p.classList.add('ok');if(++done==4){burst();setTimeout(()=>reward(1),1200)}}};st.append(p)})}
+function g3(){const C=['Há um mês que ocupa um lugar especial nesta pequena história.','É o sétimo mês do ano. O mês em que o calendário se veste de 7.','Se olhares para o ano 2024, encontrarás o outro número que precisas.'];let k=1;$('#box').className='';$('#sky').textContent='';$('#er').textContent='';$('#sel').hidden=0;$('#mo').value=$('#yr').value='';
+const sh=()=>{$('#cl').innerHTML=C.slice(0,k).map((c,i)=>`<p>💡 Pista ${i+1}: ${c}</p>`).join('');$('#bn').hidden=k>=3};sh();$('#bn').onclick=()=>{k++;sh()};
+$('#ok').onclick=()=>{if($('#mo').value=='Julho'&&$('#yr').value=='2024'){$('#sel').hidden=1;$('#er').textContent='';$('#box').className='open';$('#box').textContent='✨';$('#sky').textContent='JULHO DE 2024';burst();setTimeout(()=>reward(2),3000)}else{$('#er').textContent='Quase! Pensa nas pistas, tu consegues. 💫';$('#sel').classList.remove('shake');void $('#sel').offsetWidth;$('#sel').classList.add('shake')}}}
+function g4(){const O=[['Um abraço demorado.','Daqueles em que o tempo abranda.'],['Uma conversa sem olhar para o relógio.','As melhores horas são as que não contamos.'],['Um passeio de mãos dadas.','Sem destino, só companhia.'],['Uma mensagem inesperada.','Só para dizer: pensei em ti.'],['Um sorriso só nosso.','Aquele que só nós percebemos.'],['Um dia em que tudo o que importa é estarmos juntos.','Simples assim.']];let ch=[];const a=$('#a4');a.innerHTML='';$('#m4').textContent='';
+O.forEach(o=>{const b=document.createElement('button');b.className='cd';b.textContent=o[0];b.onclick=()=>{if(ch.length>=3||b.classList.contains('pk'))return;b.classList.add('pk');ch.push(o);$('#m4').textContent='💗 '+o[1];if(ch.length==3)setTimeout(()=>{burst();a.innerHTML=ch.map(c=>`<div class="card serif" style="grid-column:1/3;text-align:center;font-size:1.2rem">💗 ${c[0]} 💗</div>`).join('')+`<div style="grid-column:1/3;text-align:center"><button class="btn" onclick="reward(3)">Receber a recompensa ✨</button></div>`;$('#m4').textContent='Três coisas simples. As que mais ficam.'},1400)};a.append(b)})}
+function letter(){burst();go('lt')}
+function q1(){$('#qa').innerHTML=`<p class="serif" style="font-size:1.4rem">Se eu te dissesse que ainda tenho muitos elogios guardados, acreditarias?</p><button class="btn" onclick="ans(1)">Acredito 😊</button><button class="btn alt" onclick="ans(2)">Quero provas 😂</button>`}
+function ans(n){burst();$('#qa').innerHTML=n==1?`<p class="serif" style="font-size:1.5rem">Então acredita também quando te digo que és linda, doce e que gosto muito do teu jeito.</p>`:`<div class="card"><p>Prova nº 1: és linda.</p><p>Prova nº 2: és doce.</p><p>Prova nº 3: gosto do teu jeito.</p><p>Prova nº 4: esta página inteira foi criada porque alguém pensou em ti e decidiu transformar esse pensamento numa pequena aventura.</p><p>E ainda assim, não consegui colocar tudo aqui.</p></div>`;$('#qa').innerHTML+=`<div class="sign">GEOVANY ❤️ A MINHA ESTRELA</div>`}
+$('#bigstar').onclick=()=>{burst();$('#it').hidden=0;$('#hint').hidden=1;$('#bigstar').style.fontSize='3rem'};
+$('#rs').onclick=()=>{if(confirm('Reiniciar a aventura?')){S={d:[0,0,0,0]};save();go('intro')}};
+let ac,mi,on=0;$('#mu').onclick=()=>{if(on){clearInterval(mi);on=0;$('#mu').textContent='🔇';return}ac=ac||new(window.AudioContext||webkitAudioContext)();ac.resume();on=1;$('#mu').textContent='🎵';const ch=[[261.6,329.6,392],[220,261.6,329.6],[174.6,220,261.6],[196,246.9,293.7]];let k=0;mi=setInterval(()=>{const c=ch[(k/3|0)%4],o=ac.createOscillator(),g=ac.createGain(),t=ac.currentTime;o.frequency.value=c[k%3]*(k%6>2?2:1);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.05,t+.1);g.gain.exponentialRampToValueAtTime(.001,t+1.8);o.connect(g).connect(ac.destination);o.start(t);o.stop(t+1.9);k++},700)};
+go(S.d.some(x=>x)?'map':'intro');
+</script></body></html>
